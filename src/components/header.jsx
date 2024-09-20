@@ -32,7 +32,7 @@ const Header = function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-6 top-6 z-10 mx-auto flex h-16 items-center justify-between rounded-lg bg-gray-800 px-4 text-white">
+    <header className="fixed inset-0 z-10 mx-auto flex h-16 items-center justify-between rounded-lg bg-gray-800 px-4 text-white">
       <h1 className="mr-6 text-xl font-semibold">&Theta;&Tau; | &Omega;&Epsilon; Chapter</h1>
       <nav className="hidden md:block">
         <ul className="flex space-x-2">
