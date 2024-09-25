@@ -3,13 +3,13 @@ import React from "react";
 const TimelineEvent = ({ date, title, description }) => (
   <div className="mb-8 flex flex-col items-center text-left md:flex-row md:items-start">
     <div className="mb-4 mr-4 flex flex-col items-center md:mb-0">
-      <div className="bg-blue-500 hidden h-full w-1 md:block"></div>
-      <div className="bg-blue-500 h-6 w-6 rounded-full border-4 border-white"></div>
+      <div className="bg-rose-800 hidden h-full w-1 md:block"></div>
+      <div className="bg-rose-800 h-6 w-6 rounded-full border-2 border-white"></div>
     </div>
     <div className="px-4 md:w-1/2">
-      <p className="text-blue-300 text-sm font-semibold">{date}</p>
+      <p className="text-white text-sm font-semibold">{date}</p>
       <h4 className="mb-2 text-lg font-bold text-white">{title}</h4>
-      <p className="text-gray-300">{description}</p>
+      <p className="text-gray-400">{description}</p>
     </div>
   </div>
 );
@@ -65,25 +65,27 @@ const About = function About() {
 
         <br />
         <br />
-        <ul className="mx-auto list-inside list-disc text-center text-gray-300">
-          <li>Chi Chapter (University of Arizona)</li>
-          <li>Delta Gamma Chapter (Arizona State University)</li>
-          <li>Epsilon Chapter (University of California, Berkeley)</li>
-          <li>Epsilon Delta Chapter (University of California, San Diego)</li>
-          <li>Kappa Epsilon Chapter (University of Southern California)</li>
-          <li>Lambda Delta Chapter (University of the Pacific)</li>
-          <li>Lambda Epsilon Chapter (University of San Diego)</li>
-          <li>Mu Delta Chapter (University of California, Merced)</li>
-          <li>Omicron Epsilon Chapter (Northern Arizona University)</li>
-          <li>Omicron Gamma Chapter (University of California, Davis)</li>
-          <li>Phi Epsilon (California State University, Fullerton)</li>
-          <li>Rho Delta Chapter (University of Nevada, Reno)</li>
-          <li>Sigma Delta Chapter (University of California, Riverside)</li>
-          <li>Sigma Epsilon Chapter (University of California, Santa Barbara)</li>
-          <li>Upsilon Delta Chapter (University of California, Los Angeles)</li>
-          <li>Upsilon Epsilon (Santa Clara University)</li>
-          <li>Xi Epsilon Chapter (California State University, Long Beach)</li>
-        </ul>
+        <div className="pb-16">
+          <ul className="mx-auto list-inside list-disc text-center text-gray-300">
+            <li>Chi Chapter (University of Arizona)</li>
+            <li>Delta Gamma Chapter (Arizona State University)</li>
+            <li>Epsilon Chapter (University of California, Berkeley)</li>
+            <li>Epsilon Delta Chapter (University of California, San Diego)</li>
+            <li>Kappa Epsilon Chapter (University of Southern California)</li>
+            <li>Lambda Delta Chapter (University of the Pacific)</li>
+            <li>Lambda Epsilon Chapter (University of San Diego)</li>
+            <li>Mu Delta Chapter (University of California, Merced)</li>
+            <li>Omicron Epsilon Chapter (Northern Arizona University)</li>
+            <li>Omicron Gamma Chapter (University of California, Davis)</li>
+            <li>Phi Epsilon (California State University, Fullerton)</li>
+            <li>Rho Delta Chapter (University of Nevada, Reno)</li>
+            <li>Sigma Delta Chapter (University of California, Riverside)</li>
+            <li>Sigma Epsilon Chapter (University of California, Santa Barbara)</li>
+            <li>Upsilon Delta Chapter (University of California, Los Angeles)</li>
+            <li>Upsilon Epsilon (Santa Clara University)</li>
+            <li>Xi Epsilon Chapter (California State University, Long Beach)</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
