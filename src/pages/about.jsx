@@ -1,9 +1,40 @@
-//reference website: https://www.calthetatau.com/about
-//plan is to add a lot of images of us
+import React from 'react';
+
+const TimelineEvent = ({ date, title, description }) => (
+  <div className="flex flex-col md:flex-row items-center md:items-start text-left mb-8">
+    <div className="flex flex-col items-center mr-4 mb-4 md:mb-0">
+      <div className="w-1 h-full bg-blue-500 hidden md:block"></div>
+      <div className="w-6 h-6 rounded-full bg-blue-500 border-4 border-white"></div>
+    </div>
+    <div className="md:w-1/2 px-4">
+      <p className="text-sm font-semibold text-blue-300">{date}</p>
+      <h4 className="text-lg font-bold mb-2 text-white">{title}</h4>
+      <p className="text-gray-300">{description}</p>
+    </div>
+  </div>
+);
 
 const About = function About() {
+  const timelineEvents = [
+    {
+      date: "Spring 2018",
+      title: "Inception",
+      description: "Mark Muendelein meets brothers from Epsilon Delta Chapter of Theta Tau at UCSD."
+    },
+    {
+      date: "Fall 2018",
+      title: "Chapter Formation",
+      description: "Muendelein enlists friends, peers, colleagues, and mentors to begin a chapter at SJSU."
+    },
+    {
+      date: "Spring 2022",
+      title: "Omega Epsilon Chapter",
+      description: "Theta Tau's Omega Epsilon Chapter thrives at San Jose State University."
+    }
+  ];
+
   return (
-    <div className="mt-4 text-center font-light">
+    <div className="mt-4 text-center font-light max-w-4xl mx-auto px-4 text-white">
       <div className="font-bold">WHO WE ARE ... add some images like a carousel?</div>
 
       <div>
@@ -15,25 +46,25 @@ const About = function About() {
       </div>
       <div>
         <br />
-        <div className="font-bold">OMEGA EPSILON CHAPTER HISTORY , add like a timeline</div>
+        <div className="font-bold">OMEGA EPSILON CHAPTER HISTORY</div>
         <br />
+        <div className="mx-auto">
+          {timelineEvents.map((event, index) => (
+            <TimelineEvent key={index} {...event} />
+          ))}
+        </div>
         <br />
-        In Spring of 2018, Mark Muendelein met a handful of brothers from Epsilon Delta Chapter of Theta Tau, chartered
-        at University of California, San Diego. It was the same Spring he met the Theta Tau brothers that he finished
-        his term as the Vice President of Alumni Relations with Alpha Kappa Psi. By the end of the semester, he had
-        realized that his community and his career were destined for two different directions. In an attempt to bridge
-        this gap he saw, Muendelein decided to enlist friends, peers, colleagues, and mentors to begin a chapter of
-        Theta Tau at San Jose State University.
+        Omega Epsilon is part of the Western Region of Theta Tau.
       </div>
 
       <div>
         <br />
         <div className="font-bold">NATIONAL HISTORY</div>
         <br />
-        Omega Epsilon is part of the Western Region of Theta Tau.
+        
         <br />
         <br />
-        <ul class="text-white-800 ml-4 list-inside list-disc">
+        <ul className="text-gray-300 list-inside list-disc mx-auto text-center">
           <li>Chi Chapter (University of Arizona)</li>
           <li>Delta Gamma Chapter (Arizona State University)</li>
           <li>Epsilon Chapter (University of California, Berkeley)</li>
@@ -56,4 +87,5 @@ const About = function About() {
     </div>
   );
 };
+
 export default About;
