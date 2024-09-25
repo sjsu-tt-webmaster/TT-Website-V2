@@ -29,7 +29,8 @@ const About = function About() {
     {
       date: "December 2022",
       title: "Omega Epsilon Chapter",
-      description: "At end of spring 2022, under Kaye Eloise Difuntorum as Regent, petition for Chapter Status was submitted to Nationals. The petition was approved later that summer and the Installation Ceremony took place on December 3rd, 2022, where the body became known as the Omega Epsilon Chapter of Theta Tau.",
+      description:
+        "At end of spring 2022, under Kaye Eloise Difuntorum as Regent, petition for Chapter Status was submitted to Nationals. The petition was approved later that summer and the Installation Ceremony took place on December 3rd, 2022, where the body became known as the Omega Epsilon Chapter of Theta Tau.",
     },
   ];
 
