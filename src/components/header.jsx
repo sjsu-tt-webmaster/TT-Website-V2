@@ -7,10 +7,14 @@ import { useRouter } from "next/router";
 const ROUTES = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Brothers", path: "/brothers", subRoutes: [
-    { name: "Actives", path: "/brothers/actives" },
-    { name: "Alumni", path: "/brothers/alumni" },
-  ]},
+  {
+    name: "Brothers",
+    path: "/brothers",
+    subRoutes: [
+      { name: "Actives", path: "/brothers/actives" },
+      { name: "Alumni", path: "/brothers/alumni" },
+    ],
+  },
   { name: "Events", path: "/events" },
   { name: "Contact", path: "/contact" },
 ];
@@ -34,16 +38,12 @@ function DropdownLink({ className, active, href, children, subRoutes }) {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div 
-      className="relative"
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
+    <div className="relative" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
       <Link className={className} active={active} href={href}>
         {children}
       </Link>
       {isHovering && subRoutes && (
-        <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5">
+        <div className="absolute left-0 mt-2 w-48 rounded-md bg-gray-700 shadow-lg ring-1 ring-black ring-opacity-5">
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {subRoutes.map((subRoute) => (
               <NextLink

@@ -7,7 +7,7 @@ const TimelineEvent = ({ date, title, description }) => (
       <div className="bg-rose-800 h-6 w-6 rounded-full border-2 border-white"></div>
     </div>
     <div className="px-4 md:w-1/2">
-      <p className="text-white text-sm font-semibold">{date}</p>
+      <p className="text-sm font-semibold text-white">{date}</p>
       <h4 className="mb-2 text-lg font-bold text-white">{title}</h4>
       <p className="text-gray-400">{description}</p>
     </div>
