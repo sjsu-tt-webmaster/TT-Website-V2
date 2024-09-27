@@ -21,7 +21,7 @@ const PILLARS = [
 const Home = function Home() {
   return (
     <>
-      <section className="flex min-h-screen w-full flex-col items-center justify-center px-8 py-28 text-center">
+      <section className="flex w-full flex-col items-center justify-center px-8 pt-10 pb-36 text-center">
         <Image className="w-48" src="/tt.png" alt="" width={1500} height={2099} />
         <h2 className="mt-8 font-serif text-5xl font-semibold">Theta Tau</h2>
         <h3 className="mt-4 font-serif text-3xl font-medium">San José State University</h3>
