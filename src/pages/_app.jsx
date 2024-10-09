@@ -2,6 +2,7 @@ import { Inter, Lora } from "next/font/google";
 import Head from "next/head";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import Login from "../components/login";
 import "../styles/styles.css";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -27,6 +28,7 @@ function App({ Component, pageProps }) {
       `}</style>
       <Header />
       <section className="w-full grow px-6 pt-28">
+        <Login />
         <Component {...pageProps} />
       </section>
       <Footer />

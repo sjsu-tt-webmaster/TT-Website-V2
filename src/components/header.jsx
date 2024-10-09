@@ -27,7 +27,7 @@ function Link({ className, active, href, children }) {
   );
 }
 
-const Header = function Header() {
+const Header = function Header({ user }) { // Accept user as a prop
   const { asPath, pathname } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,6 +45,9 @@ const Header = function Header() {
           ))}
         </ul>
       </nav>
+      {user && ( // Conditionally render the user's email if logged in
+        <p className="ml-4 text-sm">Logged in as: {user.email}</p>
+      )}
       <button className="md:hidden" onClick={() => setIsOpen((isOpen) => !isOpen)}>
         <svg
           className={clsx("h-8 w-8 transition", { "rotate-90": isOpen })}
