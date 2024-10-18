@@ -240,6 +240,7 @@ web_modules/
 *.tgz
 
 # Yarn Integrity file
+.yarn
 .yarn-integrity
 
 # dotenv environment variable files
@@ -307,8 +308,11 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+# Husky ##
+.husky/
+
 ### VisualStudioCode ###
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
